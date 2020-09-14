@@ -43,6 +43,31 @@ from distutils.errors import CompileError
 from setuptools import Extension
 
 
+STATIC_PACKAGE_METADATA = dict(
+    name="Twisted",
+    description="An asynchronous networking framework written in Python",
+    author="Twisted Matrix Laboratories",
+    author_email="twisted-python@twistedmatrix.com",
+    maintainer="Glyph Lefkowitz",
+    maintainer_email="glyph@twistedmatrix.com",
+    url="https://twistedmatrix.com/",
+    project_urls={
+        "Documentation": "https://twistedmatrix.com/documents/current/",
+        "Source": "https://github.com/twisted/twisted",
+        "Issues": "https://twistedmatrix.com/trac/report",
+    },
+    license="MIT",
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3 :: Only",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+    ],
+    python_requires=">=3.6",
+)  # type: Dict[str, Any]
+
+
 _dev = [
     "pyflakes >= 1.0.0",
     "twisted-dev-tools >= 0.0.2",
